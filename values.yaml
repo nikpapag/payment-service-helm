@@ -6,10 +6,12 @@ replicaCount: 1
 
 
 replicas: 1
-image: <+artifact.image>
+#image: <+artifact.image>
+image: library/nginx:latest
 
 createNamespace: true
-namespace: <+infra.namespace>
+#namespace: <+infra.namespace>
+namespace: devx-boutique-nikp
 
 serviceType: ClusterIP
 servicePort: 8080
@@ -93,7 +95,7 @@ env:
   config:
     HARNESS_FF_KEY: "key"
     HARNESS_SE: "seusername"
-    HARNESS_BUILD: <+pipeline.sequenceId>
+    HARNESS_BUILD: 2
   secrets:
     key2: value2
 

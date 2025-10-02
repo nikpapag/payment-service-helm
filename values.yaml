@@ -94,7 +94,7 @@ sename: "bootcamp"
 env:
   config:
     HARNESS_FF_KEY: "key"
-    HARNESS_SE: "seusername"
+    HARNESS_SE: <+serviceVariables.catalogue_id>
     HARNESS_BUILD: 2
   secrets:
     key2: value2
